@@ -48,18 +48,42 @@ public class Main {
         int age2 = 1;
         if (age2 >= 2 && age2 <= 6) {
             System.out.println("если возраст человека " + age2 + ", то надо ходить в детский сад.");
-        }
-        if (age2 >= 7 && age2 <= 17) {
+        } else if (age2 >= 7 && age2 <= 17) {
             System.out.println("если возраст человека " + age2 + ", то надо ходить в школу.");
-        }
-        if (age2 >= 18 && age2 <= 24) {
+        } else if (age2 >= 18 && age2 <= 24) {
             System.out.println("если возраст человека " + age2 + ", то надо ходить в университет.");
-        }
-        if (age2 > 24) {
+        } else if (age2 > 24) {
             System.out.println("если возраст человека " + age2 + ", то надо ходить на работу.");
         } else {
-            System.out.println("если возраст человека " + age2 + " год, то ему еще никуда не надо ходить.");
+            System.out.println("в столь юном возрасте, никуда ходить не надо.");
         }
-
+        int age3 = 99;
+        if (age3 < 5) {
+            System.out.println("в возрасте " + age3 + " лет, еще нельзя кататься на аттракционе.");
+        } else if (age3 >= 5 && age3 <= 14) {
+            System.out.println("в возрасте " + age3 + " лет ребёнок может кататься на аттракционе, только в сопровождении взрослого");
+        } else {
+            System.out.println("в возрасте " + age3 + " лет, человек может кататься без сопровождения взрослого");
+        }
+        System.out.println("Task 6.");
+        System.out.println("Задача 6");
+        int totalPlaces = 102;
+        int sitPlaces = 60;
+        int stand = totalPlaces - sitPlaces;
+        System.out.println("Сколько людей по вашим подсчетам на данный момент в вагоне?: ");
+        int available;
+        int totalPassengers = 99;
+        if (totalPassengers > totalPlaces) {
+            System.out.println("Свободных мест не хватает");
+        } else if (totalPassengers == totalPlaces) {
+            System.out.println("Вагон заполнен");
+        } else if (totalPassengers < totalPlaces && totalPassengers >= sitPlaces) {
+            available = totalPlaces - totalPassengers;
+            System.out.println("Свободных сидячих мест нет. " + available + " мест доступно для продолжения пути стоя");
+        } else if (totalPassengers < sitPlaces) {
+            available = sitPlaces - totalPassengers;
+            System.out.println("Доступно " + available + " сидячих мест и " + stand + " мест для продолжения пути стоя");
+        }
     }
 }
+
