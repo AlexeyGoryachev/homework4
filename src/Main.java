@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
         System.out.println("Homework 4.");
@@ -83,6 +85,17 @@ public class Main {
         } else if (totalPassengers < sitPlaces) {
             available = sitPlaces - totalPassengers;
             System.out.println("Доступно " + available + " сидячих мест и " + stand + " мест для продолжения пути стоя");
+        }
+        System.out.println("Task 7.");
+        int one = 30;
+        int two = 333;
+        int three = 9;
+        if (one > two && one > three) {
+            System.out.println("наибольшее значение " + one);
+        } else if (two > one && two > three) {
+            System.out.println("наибольшее значение " + two);
+        } else if (three > one && three > two) {
+            System.out.println("наибольшее значение " + three);
         }
     }
 }
